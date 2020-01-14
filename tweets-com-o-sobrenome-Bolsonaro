@@ -123,7 +123,7 @@
         "colab": {}
       },
       "source": [
-        "tweets = api.search(q=['Python', 'Big Data'], lang='pt') # Teste o parâmetro count=150\n",
+        "tweets = api.search(q=['Bolsonaro'], lang='pt') # Teste o parâmetro count=150\n",
         "\n",
         "for i, tweet in enumerate(tweets, start=1):\n",
         "    print(\"%d ---- %s\" % (i, tweet.text))"
@@ -170,7 +170,7 @@
         "while len(tweets_salvos) < qtde_tweets:\n",
         "    contador = qtde_tweets - len(tweets_salvos)\n",
         "    try:\n",
-        "        novos_tweets = api.search(q='Python', count=contador, max_id=str(ultimo_id - 1)) # Teste com o parâmetro lang='pt'\n",
+        "        novos_tweets = api.search(q='Bolsonaro', count=contador, max_id=str(ultimo_id - 1)) # Teste com o parâmetro lang='pt'\n",
         "        if not novos_tweets:\n",
         "            print(\"Nenhum tweet para recuperar\")\n",
         "            break\n",
